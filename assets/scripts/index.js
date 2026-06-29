@@ -127,12 +127,27 @@ function getBaseUrl(url) {
     return url;
 }
 window.loadConchUrl = loadApp;
-var enableDcc2 = false;
+var enableDcc2 = true;
 var appUrl = "http://stand.alone.version/index.js"
 var dccHead = ""
 var dccUrl = ""
 var mapToDCC = null;
 if (enableDcc2) {
+    if (window.conch) {
+        try {
+            var cachePath = conch.getCachePath();
+            if (cachePath) {
+                cachePath = cachePath.replace(/\\/g, '/');
+                if (!cachePath.endsWith("/")) cachePath += "/";
+                if (fs_exists(cachePath + "head.json")) fs_rm(cachePath + "head.json");
+                if (fs_exists(cachePath + "app_head_root")) fs_rm(cachePath + "app_head_root");
+                if (fs_exists(cachePath + "downloaded_packs.json")) fs_rm(cachePath + "downloaded_packs.json");
+                console.log("Cleared LayaDCC cache files on startup!");
+            }
+        } catch(e) {
+            console.log("Error clearing LayaDCC cache: " + e);
+        }
+    }
     let layadcc = require('layadcc.js').layadcc;
     let dcc = new layadcc.LayaDCCClient(dccUrl || getBaseUrl(dccHead));
     dcc.pathMapToDCC = mapToDCC || getBaseUrl(appUrl);
