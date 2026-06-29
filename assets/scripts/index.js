@@ -127,7 +127,7 @@ function getBaseUrl(url) {
     return url;
 }
 window.loadConchUrl = loadApp;
-var enableDcc2 = true;
+var enableDcc2 = false;
 var appUrl = "http://stand.alone.version/index.js"
 var dccHead = ""
 var dccUrl = ""
