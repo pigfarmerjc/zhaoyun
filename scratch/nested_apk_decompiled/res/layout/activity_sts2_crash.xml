@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sts2_crash_background" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="@color/sts2_crash_surface" app:subtitle="@string/sts2_crash_toolbar_subtitle" app:title="@string/sts2_crash_toolbar_title" />
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="0.0dp" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.Sts2Crash.Card">
+                <LinearLayout android:orientation="vertical" android:padding="18.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:background="@drawable/bg_sts2_crash_icon" android:padding="14.0dp" android:layout_width="64.0dp" android:layout_height="64.0dp" android:foregroundGravity="center">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/icon_foreground" android:tint="@color/sts2_crash_on_primary_container" android:contentDescription="@string/sts2_crash_activity_name" />
+                        </FrameLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dp">
+                            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/sts2_crash_on_surface" android:id="@id/text_crash_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sts2_crash_title_line" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:id="@id/text_crash_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:maxLines="4" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:textSize="13.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:id="@id/text_crash_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/sts2_crash_hint" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                        <TextView android:textSize="12.0sp" android:textColor="@color/sts2_crash_on_secondary_container" android:id="@id/text_badge_renderer" android:background="@drawable/bg_sts2_crash_badge" android:paddingTop="6.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/sts2_crash_on_secondary_container" android:id="@id/text_badge_android" android:background="@drawable/bg_sts2_crash_badge" android:paddingTop="6.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/sts2_crash_on_secondary_container" android:id="@id/text_badge_build" android:background="@drawable/bg_sts2_crash_badge" android:paddingTop="6.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:paddingStart="12.0dp" android:paddingEnd="12.0dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" style="@style/Widget.Sts2Crash.Card">
+                <LinearLayout android:orientation="vertical" android:padding="18.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/sts2_crash_on_surface" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sts2_crash_section_actions" />
+                    <TextView android:textSize="13.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/sts2_crash_section_actions_body" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                        <com.google.android.material.button.MaterialButton android:id="@id/button_open_settings" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/sts2_crash_action_open_settings" android:layout_weight="1.0" />
+                        <Space android:layout_width="12.0dp" android:layout_height="1.0dp" />
+                        <com.google.android.material.button.MaterialButton android:id="@id/button_retry_game" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/sts2_crash_action_retry_game" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+                        <com.google.android.material.button.MaterialButton android:id="@id/button_copy_details" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/sts2_crash_action_copy" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                        <Space android:layout_width="12.0dp" android:layout_height="1.0dp" />
+                        <com.google.android.material.button.MaterialButton android:id="@id/button_close_app" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/sts2_crash_action_close" android:layout_weight="1.0" style="@style/Widget.Material3.Button.TextButton" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="20.0dp" style="@style/Widget.Sts2Crash.Card">
+                <LinearLayout android:orientation="vertical" android:padding="18.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/sts2_crash_on_surface" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sts2_crash_section_details" />
+                    <TextView android:textSize="13.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/sts2_crash_section_details_body" />
+                    <HorizontalScrollView android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:fillViewport="true">
+                        <TextView android:textSize="11.0sp" android:textColor="@color/sts2_crash_on_surface" android:id="@id/text_crash_details" android:background="@drawable/bg_sts2_crash_details" android:padding="14.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="1.0dp" android:textIsSelectable="true" android:fontFamily="monospace" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

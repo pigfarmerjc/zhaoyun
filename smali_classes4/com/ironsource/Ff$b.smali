@@ -1,0 +1,76 @@
+.class public final Lcom/ironsource/Ff$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/ironsource/Ff;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "b"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ironsource/Ff$b$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final b:Lcom/ironsource/Ff$b$a;
+
+
+# instance fields
+.field private final a:Lcom/ironsource/ke;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/ironsource/Ff$b$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/ironsource/Ff$b$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Lcom/ironsource/Ff$b;->b:Lcom/ironsource/Ff$b$a;
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/ironsource/ke;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/ironsource/Ff$b;->a:Lcom/ironsource/ke;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lcom/ironsource/ke;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/ironsource/Ff$b;-><init>(Lcom/ironsource/ke;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lcom/ironsource/ke;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/ironsource/Ff$b;->a:Lcom/ironsource/ke;
+
+    return-object v0
+.end method

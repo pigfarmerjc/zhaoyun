@@ -1,0 +1,7 @@
+name: Singular-v12.13.0-b38c954.master
+env: release
+git_commit: b38c954
+git_branch: master
+version_name: 12.13.0
+version_code:1
+build_date: Wed, 27 May 2026 14:59:47 +0000

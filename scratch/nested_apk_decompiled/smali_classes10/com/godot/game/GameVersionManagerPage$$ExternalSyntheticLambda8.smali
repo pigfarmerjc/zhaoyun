@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/godot/game/GameVersionManagerPage$$ExternalSyntheticLambda8;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/godot/game/GameVersionManagerPage;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/godot/game/GameVersionManagerPage;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/godot/game/GameVersionManagerPage$$ExternalSyntheticLambda8;->f$0:Lcom/godot/game/GameVersionManagerPage;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/godot/game/GameVersionManagerPage$$ExternalSyntheticLambda8;->f$0:Lcom/godot/game/GameVersionManagerPage;
+
+    invoke-static {v0, p1}, Lcom/godot/game/GameVersionManagerPage;->$r8$lambda$jBX4n3vA8oOyGxqm6SNf-HdwlhE(Lcom/godot/game/GameVersionManagerPage;Landroid/view/View;)V
+
+    return-void
+.end method

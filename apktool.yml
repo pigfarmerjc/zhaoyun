@@ -1,0 +1,15 @@
+version: 3.0.2
+apkFileName: 赵云与阿斗国际服免广无限体力.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 24
+  targetSdkVersion: 28
+versionInfo:
+  versionCode: 6
+  versionName: 1.0.5
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc

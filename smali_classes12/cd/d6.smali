@@ -1,0 +1,14 @@
+.class public final synthetic Lcd/d6;
+.super Ljava/lang/Object;
+
+
+# direct methods
+.method public static bridge synthetic a(Landroid/view/DisplayCutout;)I
+    .locals 1
+
+    invoke-static {p0}, Landroid/content/pm/۟ۤۧ;->ۦ۟ۡۨ(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@mipmap/icon" android:enabled="true" android:shortcutId="game_launch_game" android:shortcutShortLabel="@string/shortcut_launch_game_short" android:shortcutLongLabel="@string/shortcut_launch_game_long">
+        <intent android:targetPackage="com.megacrit.sts2re" android:action="android.intent.action.VIEW" android:targetClass="com.godot.game.GodotApp" />
+    </shortcut>
+    <shortcut android:icon="@drawable/ic_extra_settings_gear" android:enabled="true" android:shortcutId="game_open_settings" android:shortcutShortLabel="@string/shortcut_open_settings_short" android:shortcutLongLabel="@string/shortcut_open_settings_long">
+        <intent android:targetPackage="com.megacrit.sts2re" android:action="android.intent.action.VIEW" android:targetClass="com.godot.game.GameSettingsActivity" />
+    </shortcut>
+</shortcuts>

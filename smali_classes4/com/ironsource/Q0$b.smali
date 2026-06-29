@@ -1,0 +1,48 @@
+.class Lcom/ironsource/Q0$b;
+.super Ljava/util/TimerTask;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/ironsource/Q0;->b(J)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/ironsource/Q0;
+
+
+# direct methods
+.method constructor <init>(Lcom/ironsource/Q0;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/ironsource/Q0$b;->a:Lcom/ironsource/Q0;
+
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/ironsource/Q0$b;->a:Lcom/ironsource/Q0;
+
+    invoke-static {v0}, Lcom/ironsource/Q0;->-$$Nest$fgetb(Lcom/ironsource/Q0;)Lcom/ironsource/Fb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/ironsource/Fb;->b()V
+
+    return-void
+.end method

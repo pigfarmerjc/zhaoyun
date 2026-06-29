@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/log_row_container" android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:minHeight="72.0dp" android:paddingStart="16.0dp" android:paddingEnd="16.0dp">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/text_log_icon" android:layout_width="32.0dp" android:layout_height="32.0dp" android:text="L" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/sts2_crash_on_surface" android:ellipsize="end" android:id="@id/text_log_name" android:layout_width="0.0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+                <TextView android:textSize="11.0sp" android:textColor="@color/sts2_crash_on_secondary_container" android:id="@id/text_log_source" android:background="@drawable/bg_sts2_crash_badge" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dp" android:paddingEnd="10.0dp" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:ellipsize="middle" android:id="@id/text_log_path" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:maxLines="1" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/sts2_crash_on_surface_variant" android:id="@id/text_log_meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/sts2_crash_outline" android:layout_width="match_parent" android:layout_height="1.0dp" android:alpha="0.18" />
+</LinearLayout>

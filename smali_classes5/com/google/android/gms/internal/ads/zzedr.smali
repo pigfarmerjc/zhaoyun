@@ -1,0 +1,54 @@
+.class final Lcom/google/android/gms/internal/ads/zzedr;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@25.3.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzhcc;
+
+
+# instance fields
+.field final synthetic zza:Lcom/google/android/gms/internal/ads/zzedw;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/ads/zzedw;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzedr;->zza:Lcom/google/android/gms/internal/ads/zzedw;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Throwable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final bridge synthetic zzb(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/google/android/gms/internal/ads/zzecn;
+
+    .line 2
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzecn;->zze()V
+
+    iget-object p1, p0, Lcom/google/android/gms/internal/ads/zzedr;->zza:Lcom/google/android/gms/internal/ads/zzedw;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzedw;->zzi()Lcom/google/android/gms/internal/ads/zzedk;
+
+    move-result-object p1
+
+    .line 3
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzedk;->zzn()V
+
+    return-void
+.end method

@@ -1,0 +1,48 @@
+.class public final synthetic Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/godot/game/SettingsPage;
+
+.field public final synthetic f$1:Lcom/google/android/material/card/MaterialCardView;
+
+.field public final synthetic f$2:Lcom/google/android/material/card/MaterialCardView;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/godot/game/SettingsPage;Lcom/google/android/material/card/MaterialCardView;Lcom/google/android/material/card/MaterialCardView;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$0:Lcom/godot/game/SettingsPage;
+
+    iput-object p2, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$1:Lcom/google/android/material/card/MaterialCardView;
+
+    iput-object p3, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$2:Lcom/google/android/material/card/MaterialCardView;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$0:Lcom/godot/game/SettingsPage;
+
+    iget-object v1, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$1:Lcom/google/android/material/card/MaterialCardView;
+
+    iget-object v2, p0, Lcom/godot/game/SettingsPage$$ExternalSyntheticLambda30;->f$2:Lcom/google/android/material/card/MaterialCardView;
+
+    invoke-static {v0, v1, v2, p1}, Lcom/godot/game/SettingsPage;->$r8$lambda$89HLwthW43pYT6NnLRol_6xOg5Q(Lcom/godot/game/SettingsPage;Lcom/google/android/material/card/MaterialCardView;Lcom/google/android/material/card/MaterialCardView;Landroid/view/View;)V
+
+    return-void
+.end method

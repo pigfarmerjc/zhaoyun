@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:installLocation="auto" package="com.megacrit.sts2re" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:glEsVersion="0x30000" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="com.megacrit.sts2re.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.megacrit.sts2re.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:hasFragileUserData="false" android:icon="@mipmap/icon" android:isGame="true" android:label="@string/godot_project_name_string" android:name="com.godot.game.Sts2Application" android:requestLegacyExternalStorage="false">
+        <profileable android:enabled="true" android:shell="true"/>
+        <activity android:exported="true" android:icon="@mipmap/icon" android:label="@string/godot_project_name_string" android:name="com.godot.game.GameSettingsActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2ExtraSettings" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/settings_shortcuts"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density|layoutDirection" android:excludeFromRecents="false" android:exported="true" android:label="@string/godot_project_name_string" android:launchMode="singleInstancePerTask" android:name="com.godot.game.GodotApp" android:resizeableActivity="false" android:screenOrientation="landscape" android:theme="@style/GodotAppSplashTheme" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/game_shortcuts"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/sts2_crash_activity_name" android:name="com.godot.game.Sts2CrashActivity" android:process=":error_activity" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2Crash">
+            <intent-filter>
+                <action android:name="cat.ereza.customactivityoncrash.ERROR"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/nexus_mod_store_title" android:name="com.godot.game.NexusModsStoreActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2ExtraSettings" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/steam_account_title" android:name="com.godot.game.SteamAccountActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2ExtraSettings" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/log_viewer_title" android:name="com.godot.game.LogViewerActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2Crash.AppBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/log_file_viewer_title" android:name="com.godot.game.LogFileViewerActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2Crash.AppBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/file_browser_title" android:name="com.godot.game.FileBrowserActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2Crash.AppBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/text_editor_title" android:name="com.godot.game.TextEditorActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:theme="@style/Theme.Sts2Crash.AppBar" android:windowSoftInputMode="adjustResize"/>
+        <provider android:authorities="com.megacrit.sts2re.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <meta-data android:name="org.godotengine.plugin.v2.FmodPlugin" android:value="com.utopiarise.godot.fmod.android.plugin.FmodPlugin"/>
+        <meta-data android:name="org.godotengine.library.version" android:value="4.5.1.stable"/>
+        <service android:name="org.godotengine.godot.GodotDownloaderService"/>
+        <activity android:exported="false" android:name="org.godotengine.godot.utils.ProcessPhoenix" android:process=":phoenix" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="cat.ereza.customactivityoncrash.activity.DefaultErrorActivity" android:process=":error_activity"/>
+        <provider android:authorities="com.megacrit.sts2re.customactivityoncrashinitprovider" android:exported="false" android:initOrder="101" android:name="cat.ereza.customactivityoncrash.provider.CaocInitProvider"/>
+        <provider android:authorities="com.megacrit.sts2re.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.megacrit.sts2re.MTDataFilesProvider" android:exported="true" android:grantUriPermissions="true" android:name="bin.mt.file.content.MTDataFilesProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="bin.mt.file.content.MTDataFilesWakeUpActivity" android:noHistory="true" android:taskAffinity="com.megacrit.sts2re.MTDataFilesWakeUp"/>
+    </application>
+</manifest>
